@@ -5,7 +5,11 @@ local router = lapis.Application:extend()
 router:get("/", function(self)
   self.demo = "Ruta separada con bootstrap"
   self.pets = { "Cat", "Dog", "Bird" }
-  return { render = "home.index" }
+  print("1 ++++++++++++++++++++++++++++++++++++++")
+  print(self.year)
+  print(self.helpers.greet('pepe'))
+  print("2 ++++++++++++++++++++++++++++++++++++++")
+  return { render = "index" }
 end)
 
 return router
