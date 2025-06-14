@@ -1,5 +1,6 @@
 -- app/routes/home.lua
 local lapis = require("lapis")
+local db = require("lapis.db")
 local router = lapis.Application:extend()
 
 router:get("/", function(self)
@@ -8,6 +9,8 @@ router:get("/", function(self)
   print("1 ++++++++++++++++++++++++++++++++++++++")
   print(self.year)
   print(self.helpers.greet('pepe'))
+  local res = db.query("SELECT * FROM users;")
+  print(self.helpers.dump(res))
   print("2 ++++++++++++++++++++++++++++++++++++++")
   return { render = "index" }
 end)
