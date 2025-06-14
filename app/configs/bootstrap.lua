@@ -3,9 +3,9 @@ local home_routes = require("app.routes.home")
 local bootstrap = {}
 
 function bootstrap.load(app)
-  -- Montar las rutas bajo "/"
+  -- routes "/"
   app:include(home_routes)
-  -- Definir el manejador de 404
+  -- 404 handler
   function app:handle_404(self)
     return {
       status = 404,

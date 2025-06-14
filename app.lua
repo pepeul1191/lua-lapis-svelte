@@ -1,16 +1,13 @@
 local lapis = require("lapis")
-local etlua = require("lapis.etlua")
 local bootstrap = require("app.configs.bootstrap")
 local middlewares = require("app.configs.middlewares")
 
 local app = lapis.Application()
+-- setup template engine
 app:enable("etlua")
+-- load global variables
 middlewares.inject_globals(app)
+-- load routes
 bootstrap.load(app)
-
-app:get("/demo", function(self)
-  self.pets = { "Cat", "Dog", "Bird" }
-  return { render = "hello" }
-end)
-
+-- start
 return app
