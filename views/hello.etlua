@@ -4,4 +4,5 @@
   <li><%= item %></li>
 <% end %>
 </ul>
-<p>Año actual: <%= self.year %></p>
+<p>Año actual: <%= year %></p>
+<p>Año actual: <%= helpers.greet("pepe") %></p>

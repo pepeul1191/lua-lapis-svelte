@@ -1,1 +1,18 @@
-<h1>404</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= site_name %></title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- Importación del archivo CSS -->
+  <link rel="stylesheet" href="/dist/vendor.min.css">
+  <link rel="stylesheet" href="/dist/error.css">
+  <script>
+    const BASE_URL = 'http://localhost:8080/';
+  </script>
+</head>
+<body>
+  <script src="/dist/error.js"></script>
+</body>
+</html>
