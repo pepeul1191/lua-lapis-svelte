@@ -1,0 +1,44 @@
+# Archivos de configuración local
+.env
+*.env
+
+# Archivos de base de datos temporales
+*.sqlite
+*.sqlite3
+# *.db
+*.db-journal
+
+# LuaRocks: dependencias instaladas localmente
+*.rock
+*.rockspec
+luarocks/
+deps/
+
+# Archivos generados por MoonScript (si lo usas)
+*.lua from moonscript
+*.bak
+
+# Archivos de logs
+*.log
+
+# Archivos de backup o temporales
+*~
+*.swp
+*.tmp
+
+# OpenResty/NGINX temp files
+logs/
+# nginx.conf
+nginx.conf.compiled
+*.pid
+
+# node_modules si integras algo de JS (por ejemplo para front-end)
+node_modules/
+
+# Salida de Lapis
+output/
+
+# Archivos compilados
+*.o
+*.so
+*temp
