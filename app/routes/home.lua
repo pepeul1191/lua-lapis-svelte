@@ -2,6 +2,9 @@
 local lapis = require("lapis")
 local db = require("lapis.db")
 local router = lapis.Application:extend()
+local Model = require("lapis.db.model").Model
+
+local User = Model:extend("users")
 
 router:get("/", function(self)
   self.demo = "Ruta separada con bootstrap"
@@ -13,6 +16,13 @@ router:get("/", function(self)
   print(self.helpers.dump(res))
   print("2 ++++++++++++++++++++++++++++++++++++++")
   return { render = "index" }
+end)
+
+router:get("/users", function(self)
+  rows = User:select()
+  return {
+    json = rows
+  }
 end)
 
 return router
