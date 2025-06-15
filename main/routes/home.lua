@@ -16,7 +16,7 @@ local function render_home(self)
   print(self.helpers.dump(res))
   print("2 ++++++++++++++++++++++++++++++++++++++")
   return {
-    render = "index",
+    render = "home",
     demo = self.demo,
     pets = self.pets,
     users = res
