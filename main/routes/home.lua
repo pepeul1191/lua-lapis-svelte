@@ -6,7 +6,7 @@ local Model = require("lapis.db.model").Model
 
 local User = Model:extend("users")
 
-local function render_home_page(self)
+local function render_home(self)
   self.demo = "Ruta separada con bootstrap"
   self.pets = { "Cat", "Dog", "Bird" }
   print("1 ++++++++++++++++++++++++++++++++++++++")
@@ -24,28 +24,15 @@ local function render_home_page(self)
 end
 
 router:get("/", function(self)
-  return render_home_page(self)
+  return render_home(self)
 end)
 
 router:get("/systems", function(self)
-  return render_home_page(self)
+  return render_home(self)
 end)
 
 router:get("/users", function(self)
-  return render_home_page(self)
-end)
-
-router:get("/login", function(self)
-  return {
-    render = "login",
-  }
-end)
-
-router:get("/apis/v1/users", function(self)
-  rows = User:select()
-  return {
-    json = rows
-  }
+  return render_home(self)
 end)
 
 return router

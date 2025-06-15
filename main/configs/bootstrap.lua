@@ -1,9 +1,13 @@
-local home_routes = require("app.routes.home")
+local home_routes = require("main.routes.home")
+local access_routes = require("main.routes.access")
+local users_apis = require("main.apis.users")
 local bootstrap = {}
 
 function bootstrap.load(app)
   -- routes "/"
   app:include(home_routes)
+  app:include(access_routes)
+  app:include(users_apis)
   -- 404 handler
   app.handle_404 = function(self)
     local method = self.req.method

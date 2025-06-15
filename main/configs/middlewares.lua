@@ -1,5 +1,5 @@
 -- app/configs/middlewares.lua
-local helpers = require("app.configs.helpers")
+local helpers = require("main.configs.helpers")
 local middlewares = {}
 
 function middlewares.inject_globals(app)

@@ -1,6 +1,6 @@
 local lapis = require("lapis")
-local bootstrap = require("app.configs.bootstrap")
-local middlewares = require("app.configs.middlewares")
+local bootstrap = require("main.configs.bootstrap")
+local middlewares = require("main.configs.middlewares")
 
 local app = lapis.Application()
 -- setup template engine
